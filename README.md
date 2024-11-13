@@ -7,8 +7,8 @@ This project demonstrates essential CRUD operations and front-end/back-end integ
 
 Features
 View Students and Courses: List all students and courses.
-Student CRUD Operations: Add, update, and delete students.
-Course CRUD Operations: Add, update, and delete courses.
+Student CRUD Operations: Add, update,view and delete students.
+Course CRUD Operations: Add, update,view and delete courses.
 
 Setup Instructions
 Prerequisites
