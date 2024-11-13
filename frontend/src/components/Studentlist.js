@@ -10,12 +10,23 @@ const StudentList = () => {
             .catch(error => console.error("Cannot fetch students:", error));
     }, []);
 
+    const handleDeleteStudent = (id) => {
+        axios.delete(`/students/${id}`)
+            .then(() => {
+                alert("Student deleted successfully!");
+                setStudents(students.filter(student => student.id !== id));
+            })
+            .catch(error => console.error("Error deleting student:", error));
+    };
+
     return (
         <div className="student-list-container">
             <h2>Student List</h2>
             <ul>
                 {students.map(student => (
-                    <li key={student.id}>{student.name} - {student.department}</li>
+                    <li key={student.id}>{student.name} - {student.department}
+                        <button onClick={() => handleDeleteStudent(student.id)}>Delete</button>
+                    </li>
                 ))}
             </ul>
 
