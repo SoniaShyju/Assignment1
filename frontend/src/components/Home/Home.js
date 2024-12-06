@@ -5,24 +5,22 @@ import StudentList from '../student/Studentlist';
 import CourseList from '../course/CourseList';
 import FetchStudentById from '../student/Fetch_Update_Student';
 import FetchCourseById from '../course/Fetch_Update_Course';
+import './home.css';
 
 const Home = () => {
     return (
         <div className="home">
+            <h1>Course Managemnet</h1>
             <div className="container1">
-                <div>
-                    <AddCourse />
-                    <CourseList />
-                    <FetchCourseById />
-                </div>
+                <AddCourse />
+                <CourseList />
+                <FetchCourseById />
             </div>
-
+            <h1>Student Managemnet</h1>
             <div className='container2'>
-                <div>
-                    <AddStudent />
-                    <FetchStudentById />
-                    <StudentList />
-                </div>
+                <AddStudent />
+                <StudentList />
+                <FetchStudentById />
             </div>
         </div>
     )

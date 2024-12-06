@@ -33,7 +33,7 @@ module.exports = (passport) => {
 
     passport.deserializeUser(async (id, done) => {
         try {
-            const user = await User.findById(id); // Using async/await
+            const user = await User.findById(id); 
             if (user) {
                 done(null, user);
             } else {

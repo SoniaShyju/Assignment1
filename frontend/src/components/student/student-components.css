@@ -38,3 +38,7 @@
     border-radius: 5px;
 }
 
+.student-list-container li {
+    padding-top: 20px;
+}
+

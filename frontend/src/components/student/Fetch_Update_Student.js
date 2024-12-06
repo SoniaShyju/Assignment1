@@ -11,7 +11,7 @@ const FetchStudentById = () => {
         department: '',
         semester: ''
     });
-     
+
     const handleIdChange = (e) => {
         setStudentId(e.target.value);
     };
