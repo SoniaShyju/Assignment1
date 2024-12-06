@@ -1,0 +1,40 @@
+.addStudent input {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.addStudent,.student-list-container, .fetchStudent {
+    width: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.addStudent button {
+    padding: 10px;
+    width: 40%;
+    border: 1px solid #be9494;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.student-list-container button {
+    padding: 10px;
+    margin-left: 20px;
+    width: 100px;
+    border: 1px solid #846e6e;
+    border-radius: 5px;
+}
+

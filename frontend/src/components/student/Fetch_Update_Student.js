@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './student-components.css';
 
 const FetchStudentById = () => {
     const [studentId, setStudentId] = useState('');
@@ -10,8 +11,7 @@ const FetchStudentById = () => {
         department: '',
         semester: ''
     });
-
-
+     
     const handleIdChange = (e) => {
         setStudentId(e.target.value);
     };
@@ -49,7 +49,7 @@ const FetchStudentById = () => {
     };
 
     return (
-        <div>
+        <div className='fetchStudent'>
             <h2>Student By ID</h2>
             <input
                 type="text"
@@ -63,7 +63,7 @@ const FetchStudentById = () => {
             {selectedStudent && (
                 <div>
                     <h3>Student Details</h3>
-                    <p>ID: {selectedStudent.id}</p>
+                    <p>ID: {selectedStudent.studentId}</p>
                     <p>Name: {selectedStudent.name}</p>
                     <p>Department: {selectedStudent.department}</p>
                     <p>Semester: {selectedStudent.semester}</p>
@@ -93,29 +93,6 @@ const FetchStudentById = () => {
                     <button onClick={handleUpdateStudent}>Update Student</button>
                 </div>
             )}
-            <style>{`
-                div {
-                    max-width: 600px;
-                    margin: 20px auto;
-                    padding: 20px;
-                    background: #f9f9f9;
-                    border-radius: 8px;
-                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-                }
-                h2 {
-                    text-align: center;
-                    font-size: 24px;
-                }
-                input {
-                    padding: 10px;
-                    margin: 10px 0;
-                    width: 100%;
-                    border: 1px solid #ccc;
-                    border-radius: 5px;
-                }
-                
-                
-            `}</style>
         </div>
     );
 };

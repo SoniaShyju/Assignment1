@@ -1,0 +1,55 @@
+.addCourse {
+    width: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courseList {
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courseList li {
+    padding-top: 10px;
+}
+
+.container input {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.addCourse-label {
+    padding: 20px;
+}
+
+.addCourse button {
+    padding: 10px;
+    margin-left: 20px;
+    width: 100px;
+    border: 1px solid #846e6e;
+    border-radius: 5px;
+    display: flex;
+}
+
+.courseList button {
+    padding: 10px;
+    margin-left: 20px;
+    width: 100px;
+    border: 1px solid #846e6e;
+    border-radius: 5px;
+}
