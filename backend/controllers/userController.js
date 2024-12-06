@@ -85,16 +85,22 @@ exports.loginUser = async (req, res, next) => {
         })(req, res, next);
     } catch (err) {
         console.error("Error in loginUser:", err);
-        res.status(500).json({ error: "An unexpected error occurred" }); 
+        res.status(500).json({ error: "An unexpected error occurred" });
     }
 };
 
-exports.logoutUser = async (req, res, next) => {
-    req.logout(function (err) {
-        if (err) {
-            return next(err);
-        }
-        res.redirect("/auth/login");
-    });
+exports.logoutUser = async (req, res) => {
+    try {
+        req.logout((err) => {
+            if (err) {
+                return res.status(500).json({ message: 'Failed to logout', error: err });
+            }
+            res.status(200).json({ message: 'Logged out successfully' });
+        });
+    } catch (err) {
+        console.error('Error in logoutUser:', err);
+        res.status(500).json({ message: 'An error occurred during logout', error: err });
+    }
 };
+
 

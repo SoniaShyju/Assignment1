@@ -1,0 +1,47 @@
+.login-container{
+    position: relative; 
+    width: 500px;
+    height: 300px;
+    background-color: rgb(83, 20, 20);
+    border: 3px solid rgba(255, 255, 255, .2); 
+    color: white;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin: auto;
+    margin-top: 170px; 
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.register-container{
+    position: relative; 
+    width: 500px;
+    height: 400px;
+    background-color: rgb(83, 20, 20);
+    border: 3px solid rgba(255, 255, 255, .2); 
+    color: white;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin: auto;
+    margin-top: 170px; 
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.login-input input , .register-input input {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 30px;
+    width: 300px;
+}
+
+.login-input button, .register-input button {
+    padding: 10px;
+    width: 100px;
+}
+
+.register-link a {
+    margin-left: 10px;
+    color: white;
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './User.css';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
@@ -13,16 +14,16 @@ const Login = () => {
             const response = await fetch('/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({email, password}),
+                body: JSON.stringify({ email, password }),
             });
 
 
             const result = await response.json();
 
             if (response.ok) {
-                localStorage.setItem('userId', result.user._id); 
+                localStorage.setItem('userId', result.user._id);
                 localStorage.setItem('userEmail', result.user.email);
-                
+
                 console.log(result);
                 window.location.href = '/home';
             } else {
@@ -38,23 +39,25 @@ const Login = () => {
         <div className="login-container">
             <h2>Login</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Email"
-                    required
-                />
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-                    required
-                />
-                <button type="submit">Login</button>
 
+            <form onSubmit={handleSubmit}>
+                <div className='login-input'>
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Email"
+                        required
+                    />
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Password"
+                        required
+                    />
+                    <button type="submit">Login</button>
+                </div>
                 <div className='register-link'>
                     <p>Don't have an account ?
                         <Link to="/register" className='a'>Register</Link>
@@ -62,6 +65,7 @@ const Login = () => {
                 </div>
 
             </form>
+
         </div>
     );
 };
